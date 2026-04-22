@@ -1,0 +1,20 @@
+// Import images
+import logo from "../assets/images/logo.png";
+import defaultNews from "../assets/images/default-news.jpg";
+import userImg from "../assets/images/user.png";
+import banner from "../assets/images/banner.jpg";
+
+// Use images
+<img src={logo} alt="logo" />
+
+<img src={defaultNews} alt="news" />
+
+<img src={userImg} alt="user" />
+
+<img src={banner} alt="banner" width="100%" />
+
+// Dynamic image (backend)
+<img src={`http://localhost:3000/uploads/${news.image}`} alt="news" />
+
+// Fallback image
+<img src={news.image || defaultNews} alt="news" />

@@ -1,0 +1,132 @@
+/* 1. Sabse upar naye Tailwind ka import */
+@import "tailwindcss";
+
+/* 2. Global Root Variables */
+:root {
+  --nav-height: 64px;
+  --primary-indigo: #6366f1;
+  --primary-hover: #4f46e5;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+}
+
+/* 3. Global Body & Background (Jo humne pehle fix kiya tha) */
+body {
+  background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+/* 4. CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--slate-100);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-indigo);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-hover);
+}
+
+/* 5. PREMIUM HERO CARD (Adding your mesh effect) */
+.hero-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border-radius: 40px;
+  color: white;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* 6. LINE CLAMP (Fixed for all browsers) */
+/* 2 Lines ke liye */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+  line-clamp: 2;
+}
+
+/* 3 Lines ke liye */
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  line-clamp: 3;
+}
+
+/* 7. GLASSMORPHISM */
+.glass-nav {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid var(--slate-200);
+}
+
+/* 8. IMAGE HOVER & ANIMATIONS */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+.img-hover-zoom img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.skeleton-loader {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 9. UTILITY: HIDE SCROLLBAR */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 10. NEWS TICKER MARQUEE */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
