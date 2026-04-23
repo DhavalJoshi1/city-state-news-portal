@@ -24,12 +24,12 @@ const Sidebar = () => {
     },
     { 
       title: 'Write News', 
-      path: '/journalist/create-post', 
+      path: '/submit-news', 
       icon: PenTool 
     },
     { 
       title: 'My Articles', 
-      path: '/journalist/my-posts', 
+      path: '/journalist/dashboard', 
       icon: FileText 
     },
     { 

@@ -134,7 +134,7 @@ const NewsDetail = () => {
                  placeholder="Enter email address..." 
                  className="w-full bg-white/10 border border-white/20 rounded-2xl p-5 text-sm mb-4 outline-none focus:ring-2 focus:ring-white/50 text-white placeholder:text-indigo-300" 
                />
-               <button className="w-full bg-white text-indigo-600 py-5 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl">
+               <button className="w-full bg-white text-indigo-600 py-5 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-[#0B1120] hover:text-white transition-all shadow-xl">
                  Subscribe Now
                </button>
             </div>

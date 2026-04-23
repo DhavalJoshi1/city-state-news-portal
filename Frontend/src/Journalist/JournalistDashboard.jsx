@@ -13,7 +13,7 @@ const JournalistDashboard = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <Newspaper className="text-blue-500 mb-4" size={28} />
+          <Newspaper className="text-[#F3CA3E] mb-4" size={28} />
           <h3 className="text-slate-500 text-sm font-bold uppercase tracking-wider">My Articles</h3>
           <p className="text-3xl font-black text-slate-800">12</p>
         </div>

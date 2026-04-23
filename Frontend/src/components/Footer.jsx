@@ -20,17 +20,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white pt-20 pb-10 border-t border-[#1e3a8a]/20 font-sans">
+    <footer className="bg-[#0B1120] text-white pt-20 pb-10 border-t border-[#B8860B]/20 font-sans">
       <div className="max-w-[1440px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
         
         {/* --- SECTION 1: BRAND IDENTITY --- */}
         <div className="space-y-8">
           <Link to="/" onClick={scrollToTop} className="flex items-center gap-3 group w-fit">
-            <div className="bg-[#1e40af] p-2.5 rounded-xl shadow-[0_0_20px_rgba(30,64,175,0.3)] group-hover:rotate-12 transition-transform duration-500">
+            <div className="bg-[#D4AF37] p-2.5 rounded-xl shadow-[0_0_20px_rgba(30,64,175,0.3)] group-hover:rotate-12 transition-transform duration-500">
               <Newspaper size={28} className="text-black" />
             </div>
             <h2 className="text-2xl font-black tracking-tighter uppercase italic leading-none">
-              City State <br/> <span className="text-[#1e40af] text-sm not-italic tracking-[0.3em]">News Portal</span>
+              City State <br/> <span className="text-[#D4AF37] text-sm not-italic tracking-[0.3em]">News Portal</span>
             </h2>
           </Link>
           <p className="text-gray-500 text-sm leading-relaxed font-medium italic">
@@ -40,7 +40,7 @@ const Footer = () => {
 
         {/* --- SECTION 2: DYNAMIC CATEGORIES --- */}
         <div>
-          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-[#1e40af]">Pulse Categories</h3>
+          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-[#D4AF37]">Pulse Categories</h3>
           <ul className="space-y-4">
             {categories.map((cat) => (
               <li key={cat.slug}>
@@ -49,7 +49,7 @@ const Footer = () => {
                   onClick={scrollToTop}
                   className="text-gray-400 text-sm font-bold hover:text-white hover:translate-x-2 transition-all flex items-center gap-2 group"
                 >
-                  <span className="w-1.5 h-1.5 bg-[#1e40af] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   {cat.name}
                 </Link>
               </li>
@@ -59,7 +59,7 @@ const Footer = () => {
 
         {/* --- SECTION 3: REGIONAL & ADMIN --- */}
         <div>
-          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-[#1e40af]">Coverage</h3>
+          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-[#D4AF37]">Coverage</h3>
           <ul className="space-y-4">
             <li>
               <Link to="/state/gujarat" onClick={scrollToTop} className="text-gray-400 text-sm font-bold hover:text-white transition-all flex items-center justify-between group">
@@ -75,7 +75,7 @@ const Footer = () => {
               <Link 
                 to="/login" 
                 onClick={scrollToTop}
-                className="flex items-center gap-2 text-[#1e40af] font-black text-xs uppercase tracking-widest hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 text-[#D4AF37] font-black text-xs uppercase tracking-widest hover:text-[#FDE047] transition-colors"
               >
                 <ShieldCheck size={16} /> Admin Control
               </Link>
@@ -85,27 +85,27 @@ const Footer = () => {
 
         {/* --- SECTION 4: CONTACT & CONNECT --- */}
         <div>
-          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-[#1e40af]">Direct Line</h3>
+          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-[#D4AF37]">Direct Line</h3>
           
           <div className="flex gap-4 mb-10">
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="p-3 bg-[#0a0a0a] border border-[#1e3a8a]/20 rounded-2xl text-[#1e40af] hover:bg-[#1e40af] hover:text-black transition-all shadow-lg active:scale-90">
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="p-3 bg-[#0F172A] border border-[#B8860B]/20 rounded-2xl text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all shadow-lg active:scale-90">
               <Share2 size={20} />
             </a>
-            <a href="https://t.me" target="_blank" rel="noreferrer" className="p-3 bg-[#0a0a0a] border border-[#1e3a8a]/20 rounded-2xl text-[#1e40af] hover:bg-[#1e40af] hover:text-black transition-all shadow-lg active:scale-90">
+            <a href="https://t.me" target="_blank" rel="noreferrer" className="p-3 bg-[#0F172A] border border-[#B8860B]/20 rounded-2xl text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all shadow-lg active:scale-90">
               <Send size={20} />
             </a>
           </div>
 
           <div className="space-y-4">
             <a href="mailto:joshidhaval1503@gmail.com" className="flex items-center gap-4 group">
-              <div className="p-2 bg-[#0a0a0a] border border-[#1e3a8a]/20 rounded-xl group-hover:border-[#1e40af] transition-colors">
-                <Mail size={18} className="text-[#1e40af]" />
+              <div className="p-2 bg-[#0F172A] border border-[#B8860B]/20 rounded-xl group-hover:border-[#D4AF37] transition-colors">
+                <Mail size={18} className="text-[#D4AF37]" />
               </div>
               <span className="text-xs font-bold text-gray-500 group-hover:text-white transition-colors">joshidhaval1503@gmail.com</span>
             </a>
             <a href="tel:+918128328169" className="flex items-center gap-4 group">
-              <div className="p-2 bg-[#0a0a0a] border border-[#1e3a8a]/20 rounded-xl group-hover:border-[#1e40af] transition-colors">
-                <Phone size={18} className="text-[#1e40af]" />
+              <div className="p-2 bg-[#0F172A] border border-[#B8860B]/20 rounded-xl group-hover:border-[#D4AF37] transition-colors">
+                <Phone size={18} className="text-[#D4AF37]" />
               </div>
               <span className="text-xs font-bold text-gray-500 group-hover:text-white transition-colors">+91 81283 28169</span>
             </a>
@@ -114,16 +114,16 @@ const Footer = () => {
       </div>
 
       {/* --- BOTTOM BAR --- */}
-      <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-[#1e3a8a]/10 px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-[#B8860B]/10 px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col md:flex-row items-center gap-2 text-[10px] font-black text-gray-600 tracking-[0.2em] uppercase">
           <span>© 2026 CITY STATE NEWS</span>
           <span className="hidden md:block">|</span>
-          <span>Designed & Developed by <span className="text-[#1e40af]">DHAVAL JOSHI</span></span>
+          <span>Designed & Developed by <span className="text-[#D4AF37]">DHAVAL JOSHI</span></span>
         </div>
         
         <button 
           onClick={scrollToTop}
-          className="bg-[#0a0a0a] border border-[#1e3a8a]/30 px-8 py-2.5 rounded-full text-[10px] font-black text-[#1e40af] hover:bg-[#1e40af] hover:text-black transition-all uppercase tracking-widest active:scale-95 shadow-2xl"
+          className="bg-[#0F172A] border border-[#B8860B]/30 px-8 py-2.5 rounded-full text-[10px] font-black text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all uppercase tracking-widest active:scale-95 shadow-2xl"
         >
           Back To Top
         </button>

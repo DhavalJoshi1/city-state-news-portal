@@ -42,7 +42,7 @@ const ManageAds = () => {
                 <DollarSign size={16} className="text-green-500"/>
                 <span className="text-sm font-bold">Total Rev: $4,200</span>
             </div>
-            <button className="bg-gray-900 text-white px-4 py-2 rounded-xl text-sm hover:bg-black transition">Create New Ad</button>
+            <button className="bg-gray-900 text-white px-4 py-2 rounded-xl text-sm hover:bg-[#0B1120] transition">Create New Ad</button>
         </div>
       </div>
 

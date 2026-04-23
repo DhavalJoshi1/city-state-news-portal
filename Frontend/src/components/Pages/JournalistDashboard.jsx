@@ -57,19 +57,19 @@ const JournalistDashboard = () => {
     };
 
     if (loading) return (
-        <div className="min-h-screen bg-[#050505] flex items-center justify-center">
+        <div className="min-h-screen bg-[#060B19] flex items-center justify-center">
             <motion.div 
                 animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }} 
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-16 h-16 bg-blue-600/10 rounded-[2rem] border border-blue-600/30 flex items-center justify-center"
+                className="w-16 h-16 bg-[#D4AF37]/10 rounded-[2rem] border border-[#D4AF37]/30 flex items-center justify-center"
             >
-                <PenTool className="text-blue-500" size={32} />
+                <PenTool className="text-[#F3CA3E]" size={32} />
             </motion.div>
         </div>
     );
 
     return (
-        <div className="min-h-screen bg-[#050505] text-slate-300 font-sans selection:bg-blue-600 selection:text-white">
+        <div className="min-h-screen bg-[#060B19] text-slate-300 font-sans selection:bg-[#D4AF37] selection:text-white">
             <Navbar />
             
             <main className="max-w-[1440px] mx-auto px-6 pt-32 pb-20">
@@ -85,10 +85,10 @@ const JournalistDashboard = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 className="flex items-center gap-3 mb-8"
                             >
-                                <div className="p-2.5 bg-blue-600/10 border border-blue-600/20 rounded-xl">
-                                    <Sparkles className="text-blue-500" size={18} />
+                                <div className="p-2.5 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-xl">
+                                    <Sparkles className="text-[#F3CA3E]" size={18} />
                                 </div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#1e40af]">Journalist Intelligence Hub</span>
+                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#D4AF37]">Journalist Intelligence Hub</span>
                             </motion.div>
                             
                             <motion.h1 
@@ -97,7 +97,7 @@ const JournalistDashboard = () => {
                                 transition={{ delay: 0.1 }}
                                 className="text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter uppercase italic"
                             >
-                                Forge <span className="text-blue-600">Intel.</span>
+                                Forge <span className="text-[#D4AF37]">Intel.</span>
                             </motion.h1>
                             
                             <motion.p 
@@ -106,23 +106,23 @@ const JournalistDashboard = () => {
                                 transition={{ delay: 0.2 }}
                                 className="text-slate-500 mt-8 text-xl font-medium"
                             >
-                                Welcome back, Operative <span className="text-white">{user?.name?.split(' ')[0]}</span>. Your dispatch network has delivered <span className="text-blue-400 font-black">{stats.totalViews}</span> impressions in the last cycle.
+                                Welcome back, Operative <span className="text-white">{user?.name?.split(' ')[0]}</span>. Your dispatch network has delivered <span className="text-[#FDE047] font-black">{stats.totalViews}</span> impressions in the last cycle.
                             </motion.p>
                         </div>
                         
                         <div className="flex flex-col sm:flex-row items-center gap-6">
-                            <div className="bg-black/60 border border-blue-600/20 px-8 py-6 rounded-[2.5rem] flex items-center gap-10 backdrop-blur-xl group hover:border-blue-500 transition-all">
+                            <div className="bg-[#0B1120]/60 border border-[#D4AF37]/20 px-8 py-6 rounded-[2.5rem] flex items-center gap-10 backdrop-blur-xl group hover:border-blue-500 transition-all">
                                 <div className="flex flex-col">
                                     <span className="text-[9px] font-black text-slate-600 uppercase tracking-widest mb-1">Impact Tier</span>
                                     <span className="text-3xl font-black text-white italic tracking-tighter">ELITE V.</span>
                                 </div>
-                                <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-indigo-600 rounded-[1.5rem] flex items-center justify-center text-white shadow-[0_0_30px_rgba(30,64,175,0.4)] group-hover:scale-110 transition-transform">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#B8860B] to-indigo-600 rounded-[1.5rem] flex items-center justify-center text-white shadow-[0_0_30px_rgba(30,64,175,0.4)] group-hover:scale-110 transition-transform">
                                     <Flame size={32} />
                                 </div>
                             </div>
                             <Link 
                                 to="/submit-news" 
-                                className="group bg-blue-600 hover:bg-blue-500 text-white w-24 h-24 rounded-[3rem] flex items-center justify-center shadow-2xl shadow-blue-900/40 transition-all transform hover:scale-105 active:scale-95"
+                                className="group bg-[#D4AF37] hover:bg-[#F3CA3E] text-white w-24 h-24 rounded-[3rem] flex items-center justify-center shadow-2xl shadow-[#8B6508]/40 transition-all transform hover:scale-105 active:scale-95"
                             >
                                 <Plus size={40} className="group-hover:rotate-90 transition-transform duration-500" />
                             </Link>
@@ -141,12 +141,12 @@ const JournalistDashboard = () => {
                         <button 
                             key={tab.id}
                             onClick={() => setActiveSection(tab.id)}
-                            className={`px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-3 transition-all ${activeSection === tab.id ? 'bg-blue-600 text-white shadow-xl shadow-blue-900/40' : 'bg-[#0a0a0a] text-slate-500 hover:bg-white/5 border border-white/5'}`}
+                            className={`px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-3 transition-all ${activeSection === tab.id ? 'bg-[#D4AF37] text-white shadow-xl shadow-[#8B6508]/40' : 'bg-[#0F172A] text-slate-500 hover:bg-white/5 border border-white/5'}`}
                         >
                             <tab.icon size={16} /> {tab.label}
                         </button>
                     ))}
-                    <button className="ml-auto p-3.5 bg-white/5 rounded-2xl text-slate-500 hover:text-blue-400 transition-colors" onClick={fetchMyNews}><RefreshCw size={20} /></button>
+                    <button className="ml-auto p-3.5 bg-white/5 rounded-2xl text-slate-500 hover:text-[#FDE047] transition-colors" onClick={fetchMyNews}><RefreshCw size={20} /></button>
                 </div>
 
                 {/* --- Conditional Sections --- */}
@@ -167,7 +167,7 @@ const JournalistDashboard = () => {
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: i * 0.05 }}
                                         key={item._id} 
-                                        className="bg-[#0a0a0a] border border-white/5 rounded-[3.5rem] overflow-hidden group hover:border-blue-600/30 transition-all flex flex-col h-full shadow-lg"
+                                        className="bg-[#0F172A] border border-white/5 rounded-[3.5rem] overflow-hidden group hover:border-[#D4AF37]/30 transition-all flex flex-col h-full shadow-lg"
                                     >
                                         <div className="h-72 overflow-hidden relative">
                                             <img 
@@ -189,27 +189,27 @@ const JournalistDashboard = () => {
                                         </div>
                                         <div className="p-12 flex-grow flex flex-col">
                                             <div className="flex items-center gap-4 mb-6">
-                                                <span className="text-blue-500 text-[10px] font-black uppercase tracking-[0.3em]">{item.category?.name || 'GLOBAL'}</span>
+                                                <span className="text-[#F3CA3E] text-[10px] font-black uppercase tracking-[0.3em]">{item.category?.name || 'GLOBAL'}</span>
                                                 <div className="h-3 w-px bg-white/5"></div>
                                                 <span className="text-slate-600 text-[10px] font-black uppercase tracking-[0.3em]">{new Date(item.createdAt).toLocaleDateString()}</span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-white mb-10 line-clamp-2 leading-[1.1] uppercase italic tracking-tighter group-hover:text-blue-400 transition-colors">
+                                            <h3 className="text-3xl font-black text-white mb-10 line-clamp-2 leading-[1.1] uppercase italic tracking-tighter group-hover:text-[#FDE047] transition-colors">
                                                 {item.title}
                                             </h3>
                                             
                                             <div className="mt-auto pt-10 border-t border-white/5 flex items-center justify-between">
                                                 <div className="flex items-center gap-10">
                                                     <div className="flex items-center gap-2.5 text-slate-500 group-hover:text-white transition-colors">
-                                                        <Eye size={18} className="text-blue-600/50" /> <span className="text-xs font-black tracking-tighter italic">12.8k</span>
+                                                        <Eye size={18} className="text-[#D4AF37]/50" /> <span className="text-xs font-black tracking-tighter italic">12.8k</span>
                                                     </div>
                                                     <div className="flex items-center gap-2.5 text-slate-500 group-hover:text-white transition-colors">
-                                                        <MessageCircle size={18} className="text-blue-600/50" /> <span className="text-xs font-black tracking-tighter italic">24</span>
+                                                        <MessageCircle size={18} className="text-[#D4AF37]/50" /> <span className="text-xs font-black tracking-tighter italic">24</span>
                                                     </div>
                                                 </div>
                                                 <div className="flex gap-2">
                                                     <Link 
                                                         to={`/edit-news/${item._id}`} 
-                                                        className="p-4 bg-white/5 hover:bg-blue-600 text-slate-500 hover:text-white rounded-2xl transition-all shadow-xl"
+                                                        className="p-4 bg-white/5 hover:bg-[#D4AF37] text-slate-500 hover:text-white rounded-2xl transition-all shadow-xl"
                                                     >
                                                         <Edit3 size={18} />
                                                     </Link>
@@ -225,7 +225,7 @@ const JournalistDashboard = () => {
                                     </motion.div>
                                 ))
                             ) : (
-                                <div className="col-span-full py-48 text-center bg-[#0a0a0a] border-2 border-dashed border-white/5 rounded-[5rem] shadow-inner">
+                                <div className="col-span-full py-48 text-center bg-[#0F172A] border-2 border-dashed border-white/5 rounded-[5rem] shadow-inner">
                                     <FileText size={64} className="mx-auto text-slate-800 mb-8 opacity-20" />
                                     <h2 className="text-3xl font-black text-slate-700 uppercase tracking-widest italic">Sector Clear.</h2>
                                     <p className="text-slate-800 text-sm mt-6 font-bold max-w-sm mx-auto uppercase tracking-tighter italic">No active dispatch intel in your current pipeline.</p>
@@ -242,7 +242,7 @@ const JournalistDashboard = () => {
                                 { label: 'Next Payout Cycle', value: '4 Days', icon: Clock, color: 'amber' },
                                 { label: 'Network Multiplier', value: '1.4x', icon: Target, color: 'indigo' }
                             ].map((card, i) => (
-                                <div key={i} className="bg-[#0a0a0a] border border-white/5 p-12 rounded-[3.5rem] hover:border-emerald-500/20 transition-all shadow-2xl relative overflow-hidden group">
+                                <div key={i} className="bg-[#0F172A] border border-white/5 p-12 rounded-[3.5rem] hover:border-emerald-500/20 transition-all shadow-2xl relative overflow-hidden group">
                                     <div className="absolute top-0 right-0 p-8 opacity-5"><card.icon size={100} /></div>
                                     <div className={`w-14 h-14 rounded-2xl bg-${card.color}-500/10 flex items-center justify-center text-${card.color}-500 mb-8 group-hover:scale-110 transition-transform`}><card.icon size={24} /></div>
                                     <h3 className="text-4xl font-black text-white italic tracking-tighter mb-2">{card.value}</h3>
@@ -253,8 +253,8 @@ const JournalistDashboard = () => {
                     )}
 
                     {activeSection === 'analytics' && (
-                        <div className="bg-[#0a0a0a] border border-white/5 p-20 rounded-[4rem] text-center shadow-2xl">
-                            <TrendingUp size={64} className="mx-auto text-blue-600/10 mb-8" />
+                        <div className="bg-[#0F172A] border border-white/5 p-20 rounded-[4rem] text-center shadow-2xl">
+                            <TrendingUp size={64} className="mx-auto text-[#D4AF37]/10 mb-8" />
                             <h2 className="text-3xl font-black text-white italic uppercase tracking-widest mb-4">Engagement Neural Map</h2>
                             <p className="text-slate-600 font-bold uppercase tracking-widest text-xs max-w-md mx-auto">Calibrating traffic telemetry and reader heatmaps. Real-time data sync in progress...</p>
                         </div>

@@ -34,11 +34,11 @@ const Home = () => {
 
 
   return (
-    <div className="bg-black min-h-screen text-white font-sans">
+    <div className="bg-[#0B1120] min-h-screen text-white font-sans">
       <div className="max-w-[1440px] mx-auto px-6 pt-10">
         
         {/* --- ADVERTISEMENT SPACE --- */}
-        <div className="w-full h-40 rounded-[40px] mb-12 flex flex-col items-center justify-center border border-[#1e40af]/30 shadow-lg relative overflow-hidden group">
+        <div className="w-full h-40 rounded-[40px] mb-12 flex flex-col items-center justify-center border border-[#D4AF37]/30 shadow-lg relative overflow-hidden group">
           <img 
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1440&h=160" 
             alt="City State Ad Partner" 
@@ -46,15 +46,15 @@ const Home = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
           <div className="z-10 text-center">
-            <span className="text-[10px] font-black text-slate-300 tracking-[0.4em] uppercase py-1 px-3 border border-[#1e3a8a]/30 rounded-lg">
+            <span className="text-[10px] font-black text-slate-300 tracking-[0.4em] uppercase py-1 px-3 border border-[#B8860B]/30 rounded-lg">
               AD PARTNER
             </span>
           </div>
         </div>
 
         {/* --- DYNAMIC NEWS TICKER --- */}
-        <div className="w-full bg-[#1e40af]/10 border border-[#1e40af]/30 rounded-full py-3 px-6 mb-12 flex items-center overflow-hidden">
-          <div className="bg-[#1e40af] px-4 py-1.5 rounded-full mr-6 flex items-center gap-2 shrink-0">
+        <div className="w-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full py-3 px-6 mb-12 flex items-center overflow-hidden">
+          <div className="bg-[#D4AF37] px-4 py-1.5 rounded-full mr-6 flex items-center gap-2 shrink-0">
             <Zap size={16} className="text-black fill-black" />
             <span className="text-black font-black text-[10px] uppercase tracking-tighter">Running News</span>
           </div>
@@ -77,11 +77,11 @@ const Home = () => {
           <div className="flex-1">
             <div className="flex items-center justify-between mb-10">
               <h2 className="text-4xl font-black italic tracking-tighter uppercase">
-                <span className="text-blue-700 mr-2">|</span> Latest Stories
+                <span className="text-[#B8860B] mr-2">|</span> Latest Stories
               </h2>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
-                <span className="text-[10px] font-black text-[#1e40af] uppercase tracking-widest">Live Now</span>
+                <span className="text-[10px] font-black text-[#D4AF37] uppercase tracking-widest">Live Now</span>
               </div>
             </div>
 
@@ -117,12 +117,12 @@ const Home = () => {
                         alt={news.title} 
                       />
                       <div className="absolute top-6 left-6">
-                        <span className="bg-[#1e40af] text-black text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest">
+                        <span className="bg-[#D4AF37] text-black text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest">
                           {news.category?.name || "General"}
                         </span>
                       </div>
                     </div>
-                    <h3 className="text-2xl font-black text-white leading-tight mb-4 group-hover:text-[#1e40af] transition-colors line-clamp-2">
+                    <h3 className="text-2xl font-black text-white leading-tight mb-4 group-hover:text-[#D4AF37] transition-colors line-clamp-2">
                       {news.title}
                     </h3>
                     <div className="flex items-center gap-2 text-slate-500 text-[10px] font-bold">
@@ -138,7 +138,7 @@ const Home = () => {
               <div className="mt-16 flex justify-center border-t border-white/5 pt-10">
                 <button 
                   onClick={handleLoadMore}
-                  className="group flex items-center gap-4 text-[#1e40af] text-[11px] font-black uppercase tracking-[0.4em] hover:text-white transition-all"
+                  className="group flex items-center gap-4 text-[#D4AF37] text-[11px] font-black uppercase tracking-[0.4em] hover:text-white transition-all"
                 >
                   Load More Stories <ArrowRight size={20} className="group-hover:translate-x-3 transition-transform" />
                 </button>

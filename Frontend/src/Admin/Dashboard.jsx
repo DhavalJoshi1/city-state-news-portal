@@ -21,9 +21,9 @@ const AdminDashboard = () => {
     <div className="flex h-screen bg-gray-100">
       {/* --- Sidebar --- */}
       <div className="w-64 bg-slate-900 text-white p-6 hidden md:block">
-        <h2 className="text-2xl font-bold mb-8 text-blue-400">CityNews Admin</h2>
+        <h2 className="text-2xl font-bold mb-8 text-[#FDE047]">CityNews Admin</h2>
         <nav className="space-y-4">
-          <div className="flex items-center space-x-3 p-2 bg-blue-600 rounded-lg cursor-pointer">
+          <div className="flex items-center space-x-3 p-2 bg-[#D4AF37] rounded-lg cursor-pointer">
             <LayoutDashboard size={20} /> <span>Dashboard</span>
           </div>
           <div className="flex items-center space-x-3 p-2 hover:bg-slate-800 rounded-lg cursor-pointer transition">
@@ -39,7 +39,7 @@ const AdminDashboard = () => {
       <div className="flex-1 overflow-y-auto p-8">
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800">Admin Overview</h1>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700">
+          <button className="bg-[#D4AF37] text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#B8860B]">
             <PlusCircle size={20} /> Create News
           </button>
         </header>
@@ -76,7 +76,7 @@ const AdminDashboard = () => {
                 <tr key={item._id} className="border-b hover:bg-gray-50 transition">
                   <td className="p-4 font-medium text-gray-800">{item.title}</td>
                   <td className="p-4">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
+                    <span className="px-3 py-1 bg-blue-100 text-[#B8860B] rounded-full text-xs">
                       {item.category}
                     </span>
                   </td>

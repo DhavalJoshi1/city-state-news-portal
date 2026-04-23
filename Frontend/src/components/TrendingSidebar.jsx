@@ -20,14 +20,14 @@ const TrendingSidebar = () => {
   ];
 
   return (
-    <div className="bg-black rounded-[40px] p-8 border border-[#1e3a8a]/20 sticky top-28 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+    <div className="bg-[#0B1120] rounded-[40px] p-8 border border-[#B8860B]/20 sticky top-28 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
       
       {/* Header Section */}
       <div className="flex items-center gap-4 mb-12">
-        <div className="bg-gradient-to-br from-[#1e40af] to-blue-500 p-2.5 rounded-2xl shadow-lg shadow-blue-900/20">
+        <div className="bg-gradient-to-br from-[#D4AF37] to-blue-500 p-2.5 rounded-2xl shadow-lg shadow-[#8B6508]/20">
           <TrendingUp size={22} className="text-black" />
         </div>
-        <h3 className="text-2xl font-black italic text-[#1e40af] uppercase tracking-tighter leading-none">
+        <h3 className="text-2xl font-black italic text-[#D4AF37] uppercase tracking-tighter leading-none">
           Trending <br/> <span className="text-[12px] tracking-[0.3em] opacity-50 not-italic">Stories</span>
         </h3>
       </div>
@@ -41,19 +41,19 @@ const TrendingSidebar = () => {
             className="group cursor-pointer flex gap-5 items-start relative"
           >
             {/* Index Number */}
-            <span className="text-4xl font-black text-[#1e3a8a]/10 group-hover:text-[#1e40af]/30 transition-all duration-500 leading-none">
+            <span className="text-4xl font-black text-[#B8860B]/10 group-hover:text-[#D4AF37]/30 transition-all duration-500 leading-none">
               0{index + 1}
             </span>
             
             <div className="flex-1">
-              <span className="text-[9px] font-black text-[#1e40af] tracking-[0.3em] uppercase mb-2 block group-hover:translate-x-1 transition-transform">
+              <span className="text-[9px] font-black text-[#D4AF37] tracking-[0.3em] uppercase mb-2 block group-hover:translate-x-1 transition-transform">
                 {story.category}
               </span>
               <h4 className="text-[16px] font-bold text-gray-400 leading-snug group-hover:text-white transition-all duration-300">
                 {story.title}
               </h4>
               {/* Hover Line Effect */}
-              <div className="h-[1px] w-0 group-hover:w-full bg-gradient-to-r from-[#1e40af] to-transparent mt-3 transition-all duration-500 opacity-30"></div>
+              <div className="h-[1px] w-0 group-hover:w-full bg-gradient-to-r from-[#D4AF37] to-transparent mt-3 transition-all duration-500 opacity-30"></div>
             </div>
           </div>
         ))}
@@ -65,7 +65,7 @@ const TrendingSidebar = () => {
           navigate('/trending');
           window.scrollTo(0, 0);
         }}
-        className="w-full mt-12 py-5 border border-[#1e3a8a]/30 rounded-3xl text-[10px] font-black uppercase tracking-[0.4em] text-[#1e40af] bg-[#0a0a0a] hover:bg-[#1e40af] hover:text-black hover:border-[#1e40af] transition-all duration-500 flex items-center justify-center gap-3 active:scale-95 shadow-lg"
+        className="w-full mt-12 py-5 border border-[#B8860B]/30 rounded-3xl text-[10px] font-black uppercase tracking-[0.4em] text-[#D4AF37] bg-[#0F172A] hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all duration-500 flex items-center justify-center gap-3 active:scale-95 shadow-lg"
       >
         View All Trending <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
       </button>

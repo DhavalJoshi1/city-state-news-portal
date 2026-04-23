@@ -3,7 +3,7 @@ import { Newspaper, Search, Bell, UserCircle } from 'lucide-react';
 
 const Header = ({ title }) => {
   return (
-    <header className="bg-black border-b border-slate-800 sticky top-0 z-50 py-4 px-10 flex items-center justify-between">
+    <header className="bg-[#0B1120] border-b border-slate-800 sticky top-0 z-50 py-4 px-10 flex items-center justify-between">
       
       {/* --- MODERN LOGO SECTION --- */}
       <div className="flex items-center gap-3 group cursor-pointer">

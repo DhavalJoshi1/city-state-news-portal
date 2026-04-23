@@ -4,16 +4,16 @@
 /* 2. Global Root Variables */
 :root {
   --nav-height: 64px;
-  --primary-indigo: #6366f1;
-  --primary-hover: #4f46e5;
+  --primary-indigo: #D4AF37;
+  --primary-hover: #F3CA3E;
   --slate-100: #f1f5f9;
   --slate-200: #e2e8f0;
 }
 
 /* 3. Global Body & Background (Jo humne pehle fix kiya tha) */
 body {
-  background: radial-gradient(circle at top right, #f8fafc, #ffffff);
-  color: #0f172a;
+  background: radial-gradient(circle at top right, #0F172A, #060B19);
+  color: #f8fafc;
   min-height: 100vh;
 }
 

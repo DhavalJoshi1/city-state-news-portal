@@ -93,27 +93,27 @@ const AdminDashboard = () => {
     );
 
     if (loading) return (
-        <div className="min-h-screen bg-[#050505] flex items-center justify-center relative overflow-hidden">
+        <div className="min-h-screen bg-[#060B19] flex items-center justify-center relative overflow-hidden">
              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600/10 via-transparent to-transparent opacity-50"></div>
             <motion.div 
                 animate={{ rotate: 360 }} 
                 transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full z-10"
+                className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full z-10"
             />
         </div>
     );
 
     return (
-        <div className="min-h-screen bg-[#050505] text-slate-300 font-sans selection:bg-blue-600 selection:text-white">
+        <div className="min-h-screen bg-[#060B19] text-slate-300 font-sans selection:bg-[#D4AF37] selection:text-white">
             <Navbar />
             
             <div className="flex pt-20 h-screen overflow-hidden">
                 {/* --- sidebar --- */}
-                <aside className="w-72 bg-black/40 backdrop-blur-xl border-r border-white/5 flex flex-col p-6 z-40">
+                <aside className="w-72 bg-[#0B1120]/40 backdrop-blur-xl border-r border-white/5 flex flex-col p-6 z-40">
                     <div className="mb-10 px-4">
                         <div className="flex items-center gap-3 text-white">
-                            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-black">N</div>
-                            <span className="font-black uppercase tracking-tighter italic text-xl">Nexus<span className="text-blue-600">Pro</span></span>
+                            <div className="w-8 h-8 rounded-lg bg-[#D4AF37] flex items-center justify-center font-black">N</div>
+                            <span className="font-black uppercase tracking-tighter italic text-xl">Nexus<span className="text-[#D4AF37]">Pro</span></span>
                         </div>
                     </div>
 
@@ -128,9 +128,9 @@ const AdminDashboard = () => {
                             <button 
                                 key={item.id}
                                 onClick={() => setActiveTab(item.id)}
-                                className={`w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all group ${activeTab === item.id ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40' : 'text-slate-500 hover:bg-white/5 hover:text-slate-300'}`}
+                                className={`w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all group ${activeTab === item.id ? 'bg-[#D4AF37] text-white shadow-lg shadow-[#8B6508]/40' : 'text-slate-500 hover:bg-white/5 hover:text-slate-300'}`}
                             >
-                                <item.icon size={18} className={activeTab === item.id ? 'text-white' : 'group-hover:text-blue-400'} />
+                                <item.icon size={18} className={activeTab === item.id ? 'text-white' : 'group-hover:text-[#FDE047]'} />
                                 {item.label}
                             </button>
                         ))}
@@ -156,11 +156,11 @@ const AdminDashboard = () => {
                                 layoutId="title"
                                 className="text-4xl font-black text-white uppercase italic tracking-tighter"
                             >
-                                Admin <span className="text-blue-600 font-black">Nexus.</span>
+                                Admin <span className="text-[#D4AF37] font-black">Nexus.</span>
                             </motion.h1>
                             <div className="flex items-center gap-2 mt-2">
                                 <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                                <p className="text-[#1e3a8a] font-black text-[10px] uppercase tracking-[0.3em]">Operational Cluster: Node-01 (ACTIVE)</p>
+                                <p className="text-[#B8860B] font-black text-[10px] uppercase tracking-[0.3em]">Operational Cluster: Node-01 (ACTIVE)</p>
                             </div>
                         </div>
 
@@ -172,23 +172,23 @@ const AdminDashboard = () => {
 
                         <div className="flex items-center gap-4">
                             <div className="relative group">
-                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1e3a8a] group-focus-within:text-blue-400 transition-colors" size={16} />
+                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B8860B] group-focus-within:text-[#FDE047] transition-colors" size={16} />
                                 <input 
                                     type="text" 
                                     placeholder="Search entire grid..." 
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="bg-black border border-white/5 rounded-2xl py-3.5 pl-12 pr-6 text-sm outline-none focus:border-blue-600/50 min-w-[320px] transition-all placeholder:text-slate-700"
+                                    className="bg-[#0B1120] border border-white/5 rounded-2xl py-3.5 pl-12 pr-6 text-sm outline-none focus:border-[#D4AF37]/50 min-w-[320px] transition-all placeholder:text-slate-700"
                                 />
                             </div>
                             <button 
                                 onClick={fetchData} 
-                                className="p-3.5 bg-white/5 hover:bg-white/10 rounded-2xl text-blue-400 transition-all active:rotate-180 duration-500"
+                                className="p-3.5 bg-white/5 hover:bg-white/10 rounded-2xl text-[#FDE047] transition-all active:rotate-180 duration-500"
                                 title="Sync Intel"
                             >
                                 <RefreshCw size={20} />
                             </button>
-                            <Link to="/submit-news" className="bg-blue-600 text-white px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition-all flex items-center gap-2 shadow-2xl shadow-blue-900/40 transform active:scale-95">
+                            <Link to="/submit-news" className="bg-[#D4AF37] text-white px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-[#F3CA3E] transition-all flex items-center gap-2 shadow-2xl shadow-[#8B6508]/40 transform active:scale-95">
                                 <Plus size={16} /> Deploy Intel
                             </Link>
                         </div>
@@ -207,7 +207,7 @@ const AdminDashboard = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 key={i} 
-                                className="bg-[#0a0a0a] border border-white/5 p-8 rounded-[2.5rem] relative group hover:border-[#1e3a8a]/30 transition-all shadow-xl"
+                                className="bg-[#0F172A] border border-white/5 p-8 rounded-[2.5rem] relative group hover:border-[#B8860B]/30 transition-all shadow-xl"
                             >
                                 <div className="flex justify-between items-start mb-6">
                                     <div className="text-slate-500"><s.icon size={20} /></div>
@@ -215,7 +215,7 @@ const AdminDashboard = () => {
                                 </div>
                                 <h2 className="text-4xl font-black text-white italic tracking-tighter">{s.value}</h2>
                                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mt-1">{s.label}</p>
-                                <p className="text-[8px] text-blue-900 font-bold uppercase mt-2">{s.sub}</p>
+                                <p className="text-[8px] text-[#8B6508] font-bold uppercase mt-2">{s.sub}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -228,12 +228,12 @@ const AdminDashboard = () => {
                                 initial={{ opacity: 0, scale: 0.98 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.98 }}
-                                className="bg-[#0a0a0a] border border-white/5 rounded-[3rem] overflow-hidden backdrop-blur-md shadow-2xl"
+                                className="bg-[#0F172A] border border-white/5 rounded-[3rem] overflow-hidden backdrop-blur-md shadow-2xl"
                             >
                                 <div className="p-10 border-b border-white/5 flex justify-between items-center bg-white/[0.01]">
                                     <div className="flex items-center gap-6">
                                         <h2 className="text-white font-black uppercase tracking-widest text-xs flex items-center gap-3">
-                                            <Newspaper className="text-blue-600" size={16} /> Intelligence Hub
+                                            <Newspaper className="text-[#D4AF37]" size={16} /> Intelligence Hub
                                         </h2>
                                         <div className="h-4 w-px bg-white/5"></div>
                                         <div className="flex gap-2">
@@ -250,7 +250,7 @@ const AdminDashboard = () => {
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-left">
                                         <thead>
-                                            <tr className="bg-black text-[#1e3a8a] text-[9px] font-black uppercase tracking-[0.2em]">
+                                            <tr className="bg-[#0B1120] text-[#B8860B] text-[9px] font-black uppercase tracking-[0.2em]">
                                                 <th className="px-10 py-5">Source Identification</th>
                                                 <th className="px-10 py-5">Sector</th>
                                                 <th className="px-10 py-5">Dispatch Unit</th>
@@ -263,7 +263,7 @@ const AdminDashboard = () => {
                                                 <tr key={item._id} className="hover:bg-white/[0.015] transition-colors group">
                                                     <td className="px-10 py-7">
                                                         <div className="flex items-center gap-5">
-                                                            <div className="w-12 h-12 rounded-2xl bg-white/5 overflow-hidden shrink-0 border border-white/5 group-hover:border-blue-600/30 transition-all transform group-hover:scale-105">
+                                                            <div className="w-12 h-12 rounded-2xl bg-white/5 overflow-hidden shrink-0 border border-white/5 group-hover:border-[#D4AF37]/30 transition-all transform group-hover:scale-105">
                                                                 <img src={item.image ? (item.image.startsWith('http') ? item.image : `http://localhost:5000/${item.image.replace(/\\/g, '/')}`) : 'https://images.unsplash.com/photo-1504711432869-efd297920786?auto=format&fit=crop&q=80&w=100'} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all opacity-40 group-hover:opacity-100" />
                                                             </div>
                                                             <div className="flex flex-col min-w-0">
@@ -273,13 +273,13 @@ const AdminDashboard = () => {
                                                         </div>
                                                     </td>
                                                     <td className="px-10 py-7">
-                                                        <span className="bg-blue-600/5 text-blue-500 px-3 py-1.5 rounded-lg text-[9px] font-black uppercase border border-blue-600/10 tracking-widest">
+                                                        <span className="bg-[#D4AF37]/5 text-[#F3CA3E] px-3 py-1.5 rounded-lg text-[9px] font-black uppercase border border-[#D4AF37]/10 tracking-widest">
                                                             {item.category?.name || 'GEN-INTEL'}
                                                         </span>
                                                     </td>
                                                     <td className="px-10 py-7">
                                                         <div className="flex items-center gap-3">
-                                                            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-[10px] text-white font-black shadow-lg shadow-blue-900/30">
+                                                            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-[10px] text-white font-black shadow-lg shadow-[#8B6508]/30">
                                                                 {item.createdBy?.name?.charAt(0) || 'U'}
                                                             </div>
                                                             <span className="text-xs font-bold text-slate-400">{item.createdBy?.name || 'Operative-UN'}</span>
@@ -300,7 +300,7 @@ const AdminDashboard = () => {
                                                             {item.status !== 'published' && (
                                                                 <button onClick={() => handleStatusUpdate(item._id, 'published')} className="p-3 text-emerald-400 hover:bg-emerald-400/10 rounded-2xl transition-all" title="Authorize"><CheckCircle size={18} /></button>
                                                             )}
-                                                            <Link to={`/edit-news/${item._id}`} className="p-3 text-blue-400 hover:bg-blue-400/10 rounded-2xl transition-all"><Edit3 size={18} /></Link>
+                                                            <Link to={`/edit-news/${item._id}`} className="p-3 text-[#FDE047] hover:bg-[#FDE047]/10 rounded-2xl transition-all"><Edit3 size={18} /></Link>
                                                             <button onClick={() => handleDelete(item._id)} className="p-3 text-slate-600 hover:text-rose-500 hover:bg-rose-500/10 rounded-2xl transition-all"><Trash2 size={18} /></button>
                                                         </div>
                                                     </td>
@@ -326,16 +326,16 @@ const AdminDashboard = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
-                                className="bg-[#0a0a0a] border border-white/5 rounded-[3rem] overflow-hidden"
+                                className="bg-[#0F172A] border border-white/5 rounded-[3rem] overflow-hidden"
                             >
                                 <div className="p-10 border-b border-white/5 bg-white/[0.01]">
                                     <h2 className="text-white font-black uppercase tracking-widest text-xs flex items-center gap-3">
-                                        <Users className="text-blue-600" size={16} /> Operative Register
+                                        <Users className="text-[#D4AF37]" size={16} /> Operative Register
                                     </h2>
                                 </div>
                                 <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {filteredUsers.map(u => (
-                                        <div key={u._id} className="bg-black border border-white/5 p-8 rounded-[2rem] hover:border-blue-600/20 transition-all flex items-center gap-6 group">
+                                        <div key={u._id} className="bg-[#0B1120] border border-white/5 p-8 rounded-[2rem] hover:border-[#D4AF37]/20 transition-all flex items-center gap-6 group">
                                             <div className="w-16 h-16 rounded-[1.5rem] bg-gradient-to-br from-slate-800 to-black border border-white/5 flex items-center justify-center text-xl font-black text-white group-hover:scale-110 transition-transform">
                                                 {u.name?.charAt(0)}
                                             </div>
@@ -343,7 +343,7 @@ const AdminDashboard = () => {
                                                 <span className="text-white font-bold uppercase text-sm truncate">{u.name}</span>
                                                 <span className="text-[9px] text-slate-600 font-bold uppercase mt-0.5 truncate">{u.email}</span>
                                                 <div className="flex items-center gap-2 mt-3">
-                                                    <span className={`px-3 py-1 rounded-full text-[8px] font-black uppercase ${u.role === 'admin' ? 'bg-blue-600 text-white' : 'bg-slate-800 text-slate-400'}`}>
+                                                    <span className={`px-3 py-1 rounded-full text-[8px] font-black uppercase ${u.role === 'admin' ? 'bg-[#D4AF37] text-white' : 'bg-slate-800 text-slate-400'}`}>
                                                         {u.role}
                                                     </span>
                                                     <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">Active</span>
@@ -363,9 +363,9 @@ const AdminDashboard = () => {
                                         { label: 'Data Registry (Mongo)', status: 'Connected', icon: Database, health: 98 },
                                         { label: 'Intelligence API', status: 'Stable', icon: Activity, health: 100 },
                                     ].map((h, i) => (
-                                        <div key={i} className="bg-[#0a0a0a] border border-white/5 p-10 rounded-[3rem]">
+                                        <div key={i} className="bg-[#0F172A] border border-white/5 p-10 rounded-[3rem]">
                                             <div className="flex justify-between items-start mb-8">
-                                                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-blue-500"><h.icon size={24} /></div>
+                                                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#F3CA3E]"><h.icon size={24} /></div>
                                                 <span className="text-emerald-500 text-[9px] font-black uppercase tracking-widest bg-emerald-500/5 px-3 py-1 rounded-full border border-emerald-500/10">Online</span>
                                             </div>
                                             <h3 className="text-white font-black text-xs uppercase tracking-widest mb-2">{h.label}</h3>
@@ -374,7 +374,7 @@ const AdminDashboard = () => {
                                                 <span className="text-[10px] text-slate-600 font-bold uppercase mb-1">Response Stability</span>
                                             </div>
                                             <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden">
-                                                <motion.div initial={{ width: 0 }} animate={{ width: `${h.health}%` }} className="h-full bg-blue-600 shadow-[0_0_10px_rgba(30,64,175,0.5)]"></motion.div>
+                                                <motion.div initial={{ width: 0 }} animate={{ width: `${h.health}%` }} className="h-full bg-[#D4AF37] shadow-[0_0_10px_rgba(30,64,175,0.5)]"></motion.div>
                                             </div>
                                         </div>
                                     ))}
@@ -385,7 +385,7 @@ const AdminDashboard = () => {
                         {activeTab === 'analytics' && (
                             <div className="flex items-center justify-center py-40 border-2 border-dashed border-white/5 rounded-[4rem]">
                                 <div className="text-center">
-                                    <BarChart3 size={48} className="mx-auto text-blue-600/20 mb-4" />
+                                    <BarChart3 size={48} className="mx-auto text-[#D4AF37]/20 mb-4" />
                                     <h2 className="text-xl font-black text-slate-500 uppercase tracking-widest italic">Traffic Neural Map</h2>
                                     <p className="text-[10px] text-slate-600 font-bold uppercase tracking-widest mt-2">Integrating Real-time Visualization Engine...</p>
                                 </div>

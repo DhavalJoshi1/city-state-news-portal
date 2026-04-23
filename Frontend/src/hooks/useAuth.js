@@ -13,19 +13,8 @@ export const useAuth = () => {
     throw new Error('useAuth must be used within an AuthProvider. Check your App.jsx wrapping!');
   }
 
-  // Destructuring for easy access
-  const { user, token, loading, login, logout, register, isAdmin } = context;
-
-  return {
-    user,
-    token,
-    loading,
-    login,
-    logout,
-    register,
-    isAdmin,
-    isAuthenticated: !!user, // Boolean helper: true if user exists
-  };
+  // Return the entire context so all values (like isReporter) are available
+  return context;
 };
 
 export default useAuth;

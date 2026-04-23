@@ -42,7 +42,7 @@ const StateNews = () => {
   );
 
   const stats = [
-    { label: "Total Reports", value: "12.4k", icon: Globe, color: "text-blue-400" },
+    { label: "Total Reports", value: "12.4k", icon: Globe, color: "text-[#FDE047]" },
     { label: "Live Updates", value: "142", icon: Zap, color: "text-amber-400" },
     { label: "Districts", value: "33", icon: MapPin, color: "text-emerald-400" },
   ];
